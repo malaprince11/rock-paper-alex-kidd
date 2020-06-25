@@ -16,7 +16,7 @@ section {
     height: 100vh;
     font-family: "SEGA LOGO FONT";
     letter-spacing: 3px;
-    background: url("/images/logo.png");
+    background: url("./images/logo.png");
     background-repeat: no-repeat;
     
 
