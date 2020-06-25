@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Alex kidd rock papper scissors</title>
+  </head>
+
+  <body>
+    <section class="game">
+        <audio src="./sound/alex-kidd.mp3" id="main-sound" ></audio>
+        <audio src="./sound/zoop.mp3" id="zoop-sound" ></audio>
+        <audio src="./sound/you_win.wav" id="win-sound" ></audio>
+        <audio src="./sound/you_lose.wav" id="lose-sound" ></audio>
+        <audio src="./sound/draw.wav" id="draw-sound" ></audio>
+      <div class="./score">
+        <div class="player-score">
+          <h2>Player</h2>
+          <p>0</p>
+        </div>
+            <div class="computer-score">
+              <h2>Computer</h2>
+              <p>0</p>
+            </div>
+          </div>
+      <div class="intro" >
+        <h1> <span class="rocky">Rock</span><span class="papy"> .Papper</span> <span class="sysy">.Scissors</span></h1>
+        <button>Start game</button>
+      </div>
+      <div class="match fadeOut">
+        <h2 class="winner">Choose option</h2>
+        <div class="hands">
+          <img class="player-hand" src="./images/rock.png" />
+          <img class="computer-hand" src="./images/rock.png" alt="" />
+        </div>
+        <div class="option">
+          <button class="rock">rock</button>
+          <button class="paper">paper</button>
+          <button class="scissors">scissors</button>
+        </div>
+        <div id="winning-message">
+            <div id="end-win">Game Over</div>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+</section>
+</body>
+</html>

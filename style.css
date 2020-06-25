@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family: 'SEGA LOGO FONT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+    }
+
+
+section {
+    height: 100vh;
+    background-color: bisque;
+    font-family: "SEGA LOGO FONT";
+    letter-spacing: 3px;
+    background: url("/images/logo.png");
+    background-repeat: no-repeat;
+    
+
+
+}
+
+.score {
+    
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score h2 {
+    font-size: 30px;
+    font-family: "SEGA LOGO FONT";
+}
+.player-score h2 {
+    color: rgb(79, 184, 189);
+}
+.computer-score h2{
+    color: rgb(208, 46, 138)
+}
+
+.score p {
+    color: rgb(208, 46, 138);
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-family: "SEGA LOGO FONT";
+    letter-spacing: 3px;
+}
+
+.intro {
+    color: aliceblue;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+    font-size: 50px;
+    font-family: "SEGA LOGO FONT";
+    letter-spacing: 3px;
+}
+.rocky{
+    color: rgb(208, 46, 138);
+}
+.papy{
+    color: rgb(255, 207, 59);
+}
+.sysy{
+    color: rgb(79, 184, 189);
+}
+.intro button{
+    animation-name: test;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+@keyframes test{
+    0% {background-color:rgb(208, 46, 138) ;}
+    40% {background-color:rgb(255, 207, 59);}
+    70% {background-color: rgb(79, 184, 189) ;}
+    100% {background-color:rgb(208, 46, 138) ;}
+
+}
+
+.intro button,
+.match button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(208, 46, 138);
+    border-radius: 25px;
+    outline:none;
+    cursor: pointer;
+}
+.option .paper{
+    background-color: rgb(255, 207, 59);
+}
+.option .scissors{
+    background-color: rgb(79, 184, 189);
+}
+.match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.winner {
+    color: rgb(208, 46, 138);
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.hands,
+.option {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-hand {
+    transform: rotate(90deg);
+    height: 300px;
+    width: 300px;
+    
+}
+.computer-hand {
+    transform: rotate(-90deg);
+    height: 300px;
+    width: 300px;
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+#winning-message{
+    display:flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(79, 184, 189);
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    border-radius: 25px;
+    color: rgb(208, 46, 138);
+    font-size: 3rem;
+    flex-direction: column;
+    visibility:hidden;
+}
+
+.visible {
+    visibility:visible;
+}
+
+@keyframes shakePlayer {
+    0% {
+        transform: rotate(90deg) translateX(0px);
+    }
+
+    15% {
+        transform: rotate(90deg) translateX(-50px);
+    }
+
+    25% {
+        transform: rotate(90deg) translateX(0px);
+    }
+
+    35% {
+        transform: rotate(90deg) translateX(-50px);
+    }
+
+    50% {
+        transform: rotate(90deg) translateX(0px);
+    }
+
+    65% {
+        transform: rotate(90deg) translateX(-50px);
+    }
+
+    75% {
+        transform: rotate(90deg) translateX(0px);
+    }
+
+    85% {
+        transform: rotate(90deg) translateX(-50px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(0px);
+    }
+}
+
+@keyframes shakeComputer {
+
+    0% {
+        transform:rotate(-90deg) translateX(0px);
+    }
+
+    15% {
+        transform:rotate(-90deg) translateX(-50px);
+    }
+
+    25% {
+        transform:rotate(-90deg) translateX(0px);
+    }
+
+    35% {
+        transform:rotate(-90deg) translateX(-50px);
+    }
+
+    50% {
+        transform:rotate(-90deg) translateX(0px);
+    }
+
+    65% {
+        transform: rotate(-90deg) translateX(-50px);
+    }
+
+    75% {
+        transform: rotate(-90deg)translateX(0px);
+    }
+
+    85% {
+        transform: rotate(-90deg) translateX(-50px);
+    }
+
+    100% {
+        transform:rotate(-90deg) translateX(0px);
+    }
+}
